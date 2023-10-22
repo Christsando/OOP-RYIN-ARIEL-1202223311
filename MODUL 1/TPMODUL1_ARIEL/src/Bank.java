@@ -9,20 +9,30 @@ import java.util.ArrayList;
 
 public class Bank {
     private Account account;
-    List<String> Account_list = new ArrayList<String>();
+    List<Account> Account_list = new ArrayList<Account>();
     // Account storage
 
-    public void Add_account(String bank_account){
+    public void Add_account(Account account){
         // Create new account or add account that already exist
-        Account_list.add(bank_account);
+        Account_list.add(account);
     }
 
-    public void Remove_account(){
-
+    public void Remove_account(int accNumber) {
+        for (Account account : Account_list)
+            if (account.getNumber() == accNumber) {
+                Account_list.remove(account);
+                System.out.println("Akun " + account.getName() + " telah dihapus.");
+                return;
+            }
     }
 
-    public void getAccount(){
-
+    public Account getAccount(int accNumber){
+        for (Account account : Account_list) {
+            if (account.getNumber() == accNumber) {
+                return account;
+            }
+        }
+        return null;
     }
 
     public void getAllaccount(){

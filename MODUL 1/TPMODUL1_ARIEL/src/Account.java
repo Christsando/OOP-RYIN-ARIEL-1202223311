@@ -46,7 +46,7 @@ public class Account {
     }
 
     public String toString(){
-        return ("Account name : " + getName() + ", Account number : " + getNumber()
-        + ", Balance : " + getBalance());
+        return ("Account name : " + getName() + " || Account number : " + getNumber()
+        + " || Balance : " + getBalance());
     }
 }

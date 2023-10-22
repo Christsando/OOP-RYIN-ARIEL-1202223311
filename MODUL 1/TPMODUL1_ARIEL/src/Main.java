@@ -24,16 +24,34 @@ public class Main {
         // Space
         System.out.println(" ");
 
-        // Get account by looping
+        // Add account to storage
+        bank.Add_account(acc1);
+        bank.Add_account(acc2);
+        bank.Add_account(acc3);
 
+        // Get account by looping
+        Account retrievedAccount = bank.getAccount(1202223311);
+        if (retrievedAccount != null) {
+            System.out.println("Retrieved Account :");
+            System.out.println(retrievedAccount.toString());
+        } else {
+            System.out.println("Account not found!");
+        }
 
         // Space
         System.out.println(" ");
 
-        // Add account to storage
-        bank.Add_account(acc1.toString());
-        bank.Add_account(acc2.toString());
-        bank.Add_account(acc3.toString());
+        // Show all account in account storage
+        bank.getAllaccount();
+
+        // Space
+        System.out.println(" ");
+
+        // Delete Account
+        bank.Remove_account(1118899810);
+
+        // Space
+        System.out.println(" ");
 
         // Show all account in account storage
         bank.getAllaccount();
