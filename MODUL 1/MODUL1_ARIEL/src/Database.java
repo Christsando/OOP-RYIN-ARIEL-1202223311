@@ -17,8 +17,5 @@ public class Database {
     }
 
     // TODO: Create Method to Buy Ticket and Show the Total Price
-    public void Buy_ticker(){
-
-    }
     }
 }

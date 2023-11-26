@@ -23,10 +23,8 @@ public class User {
 
     // TODO: Create Method to Register User and Display User's Name and Phone Number and success message
     public void Registration(){
-        try{
-            System.out.println("Registrasi Berhasil !");
-            System.out.println("Nama : " + Name);
-            System.out.println("No. Handphone : " + Phone_number);
-        }
+        System.out.println("Registrasi Berhasil !");
+        System.out.println("Nama : " + Name);
+        System.out.println("No. Handphone : " + Phone_number);
     }
 }
