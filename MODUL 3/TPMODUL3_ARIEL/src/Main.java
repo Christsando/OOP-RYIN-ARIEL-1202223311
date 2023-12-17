@@ -25,7 +25,18 @@ public class Main {
         System.out.print("Enter courses to enroll in (Separated by comas) : ");
         String courseName = input.nextLine();
 
-        // ADDING DATA 1
+        // SPLIT COURSES
+        String[] courseList = courseName.split(", ");
+
+        // DISPLAY COURSES
+        for (int i = 0; i < courseList.length; i++) {
+            System.out.println("\nCourse ID: " + (i + 101) + ",");
+            System.out.println("Course Name: " + courseList[i]);
+            System.out.println("Student: ");
+            System.out.println("- "+ name);
+        }
+
+        // ADDING DATA
         Student student1 = new Student(name, id);
         student1.enrollInCourse(courseName);
 
@@ -34,6 +45,10 @@ public class Main {
         Admin admin1 = new Admin("Andreas", 11012023);
 
         // OUTPUT
+        // Enroll student in courses
+        for (String course : courseList) {
+            student1.enrollInCourse(course);
+        }
         System.out.println(student1.getUserDetail());
         teacher1.teachClass("Matematika");
         admin1.manageSystem(" managing the university system.");
